@@ -4,9 +4,8 @@ export interface IGuest extends Document {
   fullName: string;
   phone: string;
   email?: string;
-
   role: "Guest";
-
+  slotId: mongoose.Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -35,6 +34,12 @@ const patientSchema = new Schema<IGuest>(
       type: String,
       enum: ["Guest"],
       default: "Guest",
+    },
+    slotId: {
+      type: Schema.Types.ObjectId,
+      ref: "Slot",
+      required: true,
+      unique: true, // جلوگیری از رزرو دوباره
     },
   },
   { timestamps: true },

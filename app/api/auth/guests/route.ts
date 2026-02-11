@@ -8,6 +8,7 @@ interface CreatePatientBody {
   phone: string;
   email?: string;
   role?: "Guest";
+  slotId: string;
 }
 
 export async function POST(req: Request) {
@@ -17,7 +18,7 @@ export async function POST(req: Request) {
 
     // 2️⃣ گرفتن body و تایپینگ
     const body: CreatePatientBody = (await req.json()) as CreatePatientBody;
-    const { fullName, phone, email, role } = body;
+    const { fullName, phone, email, role, slotId } = body;
 
     // 3️⃣ اعتبارسنجی اولیه
     if (!fullName || !phone) {
@@ -33,6 +34,7 @@ export async function POST(req: Request) {
       phone,
       email,
       role,
+      slotId,
     });
 
     // 5️⃣ برگرداندن پاسخ موفق
