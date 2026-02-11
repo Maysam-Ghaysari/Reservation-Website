@@ -22,7 +22,7 @@ const reservationSchema = new Schema<IReservation>(
 
     patientId: {
       type: Schema.Types.ObjectId,
-      ref: "Patient",
+      ref: "Guest",
       required: false,
     },
 

@@ -1,3 +1,9 @@
-export default function Login() {
-  return <h1>Login</h1>;
+import LoginForm from "@/components/templates/login-register/LoginForm";
+
+export default function RegisterPage() {
+  return (
+    <main>
+      <LoginForm />
+    </main>
+  );
 }

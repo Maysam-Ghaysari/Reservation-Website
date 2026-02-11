@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
 import connectDB from "@/config/db";
-import Patient, { IPatient } from "@/models/Patient";
+import Guest, { IGuest } from "@/models/Guest";
 
 // تایپ body
 interface CreatePatientBody {
   fullName: string;
   phone: string;
   email?: string;
-  role?: "PATIENT" | "DOCTOR" | "ADMIN";
+  role?: "Guest";
 }
 
 export async function POST(req: Request) {
@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     }
 
     // 4️⃣ ایجاد Patient جدید
-    const patient = await Patient.create({
+    const patient = await Guest.create({
       fullName,
       phone,
       email,

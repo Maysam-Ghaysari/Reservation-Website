@@ -1,17 +1,18 @@
 import mongoose, { Schema, model, models, Document } from "mongoose";
 
-export interface IPatient extends Document {
+export interface IUser extends Document {
   fullName: string;
   phone: string;
   email?: string;
+  password: string;
 
-  role: "PATIENT" | "DOCTOR" | "ADMIN";
+  role: "USER" | "DOCTOR";
 
   createdAt: Date;
   updatedAt: Date;
 }
 
-const patientSchema = new Schema<IPatient>(
+const userSchema = new Schema<IUser>(
   {
     fullName: {
       type: String,
@@ -33,13 +34,17 @@ const patientSchema = new Schema<IPatient>(
 
     role: {
       type: String,
-      enum: ["PATIENT", "DOCTOR", "ADMIN"],
-      default: "PATIENT",
+      enum: ["USER", "DOCTOR"],
+      default: "USER",
+    },
+    password: {
+      type: String,
+      required: true,
     },
   },
   { timestamps: true },
 );
 
-const Patient = models.Patient || model<IPatient>("Patient", patientSchema);
+const User = models.User || model<IUser>("User", userSchema);
 
-export default Patient;
+export default User;

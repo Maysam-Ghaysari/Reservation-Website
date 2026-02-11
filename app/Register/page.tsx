@@ -1,3 +1,9 @@
-export default function Register() {
-  return <h1>Register</h1>;
+import RegisterForm from "@/components/templates/login-register/RegisterForm";
+
+export default function RegisterPage() {
+  return (
+    <main>
+      <RegisterForm />
+    </main>
+  );
 }

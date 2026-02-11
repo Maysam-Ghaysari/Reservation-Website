@@ -53,7 +53,13 @@ const generateRefreshToken = (data: object): string => {
   });
   return token;
 };
-
+const verifyRefreshToken = (token: string): TokenPayload | false => {
+  try {
+    return verify(token, process.env.RefreshTokenSecretKey!) as TokenPayload;
+  } catch {
+    return false;
+  }
+};
 // بخش اعتبار سنجی (Regex)
 const validateName = (name: string): boolean => {
   const pattern = /^[a-zA-Zآ-ی\s]{2,30}$/;
@@ -76,7 +82,7 @@ const validatePhone = (phone: string): boolean => {
   return pattern.test(phone);
 };
 
-export default {
+export {
   hashPassword,
   verifyPassword,
   generateAccessToken,
@@ -86,4 +92,5 @@ export default {
   validateEmail,
   validatePassword,
   validatePhone,
+  verifyRefreshToken,
 };
