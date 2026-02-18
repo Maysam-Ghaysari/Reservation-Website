@@ -6,36 +6,12 @@ import {
   HiOutlineClock,
   HiOutlineLocationMarker,
   HiOutlinePhone,
-  HiChevronLeft,
 } from "react-icons/hi";
+import Navbar from "../navbar/navbar";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-50 font-[vazir]" dir="rtl">
-      {/* --- Navbar --- */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="text-xl font-bold text-blue-700">دکتر علی محمدی</div>
-          <div className="hidden md:flex gap-8 text-gray-600 font-medium text-sm">
-            <a href="#about" className="hover:text-blue-600 transition">
-              بیوگرافی
-            </a>
-            <a href="#services" className="hover:text-blue-600 transition">
-              خدمات
-            </a>
-            <a href="#contact" className="hover:text-blue-600 transition">
-              تماس و آدرس
-            </a>
-          </div>
-          <Link
-            href="/login-register"
-            className="bg-blue-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-700 transition-all text-sm shadow-md shadow-blue-100"
-          >
-            ورود / ثبت‌نام بیمار
-          </Link>
-        </div>
-      </nav>
-
       {/* --- Hero Section --- */}
       <section className="max-w-7xl mx-auto px-6 py-12 lg:py-20 flex flex-col lg:flex-row items-center gap-12">
         {/* تصویر دکتر */}
