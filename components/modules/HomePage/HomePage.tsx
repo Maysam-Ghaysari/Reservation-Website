@@ -7,20 +7,19 @@ import {
   HiOutlineLocationMarker,
   HiOutlinePhone,
 } from "react-icons/hi";
-import Navbar from "../navbar/navbar";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-50 font-[vazir]" dir="rtl">
+    <div className="min-h-screen bg-slate-50 " dir="rtl">
       {/* --- Hero Section --- */}
-      <section className="max-w-7xl mx-auto px-6 py-12 lg:py-20 flex flex-col lg:flex-row items-center gap-12">
+      <section className="max-w-7xl mx-auto px-6 py-20 lg:py-50 flex flex-col lg:flex-row items-center gap-12">
         {/* تصویر دکتر */}
         <div className="w-full lg:w-1/2 flex justify-center order-2 lg:order-1">
           <div className="relative">
             <div className="absolute -inset-4 bg-blue-200 rounded-[2rem] rotate-6 opacity-30"></div>
             <div className="relative w-72 h-72 md:w-[400px] md:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
               <img
-                src="/images/doctor-portrait.jpg" // عکس دکتر را اینجا قرار بده
+                src="/img-doctor/doctor.jpg" // عکس دکتر را اینجا قرار بده
                 alt="Dr. Ali Mohammadi"
                 className="w-full h-full object-cover"
               />
@@ -47,7 +46,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link
-              href="/reserve"
+              href="/appointment"
               className="flex-1 bg-blue-600 text-white text-center py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition shadow-xl shadow-blue-200"
             >
               <HiOutlineCalendar size={24} />
