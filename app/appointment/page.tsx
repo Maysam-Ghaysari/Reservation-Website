@@ -111,11 +111,13 @@ export default function AppointmentBooking() {
   const maxDate = format(addDays(new Date(), 60), "yyyy-MM-dd"); // مثلاً ۲ ماه جلوتر
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-10 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-10 px-4 sm:px-6 lg:px-8 font-[vazir] ">
       <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200">
         {/* هدر */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-7 text-white">
-          <h1 className="text-2xl md:text-3xl font-bold">رزرو نوبت ویزیت</h1>
+          <h1 className="text-2xl md:text-3xl font-[vazir] ">
+            رزرو نوبت ویزیت
+          </h1>
           <p className="mt-2 text-blue-100">
             زمان مناسب خود را انتخاب کنید و نوبت خود را ثبت نمایید
           </p>
@@ -124,7 +126,7 @@ export default function AppointmentBooking() {
         <div className="p-6 md:p-8">
           {/* انتخاب تاریخ */}
           <div className="mb-10">
-            <label className="block text-gray-700 font-semibold mb-3 text-lg">
+            <label className="block text-gray-700 font-[vazir]  mb-3 text-lg">
               تاریخ ویزیت
             </label>
             <input
@@ -146,10 +148,10 @@ export default function AppointmentBooking() {
 
           {/* لیست اسلات‌ها */}
           <div className="mb-12">
-            <h2 className="text-xl font-semibold text-gray-800 mb-5 flex items-center gap-2">
+            <h2 className="text-xl font-[vazir]  text-gray-800 mb-5 flex items-center gap-2">
               زمان‌های موجود
               {selectedDate && (
-                <span className="text-base font-normal text-gray-500">
+                <span className="text-base font-[vazir]  text-gray-500">
                   ({format(new Date(selectedDate), "dd MMMM", { locale: faIR })}
                   )
                 </span>
@@ -180,7 +182,7 @@ export default function AppointmentBooking() {
                     key={slot._id}
                     onClick={() => setSelectedSlotId(slot._id)}
                     className={`
-                      py-3.5 px-4 rounded-xl text-center font-medium transition-all duration-200
+                      py-3.5 px-4 rounded-xl text-center transition-all duration-200
                       border shadow-sm
                       ${
                         selectedSlotId === slot._id
@@ -199,13 +201,13 @@ export default function AppointmentBooking() {
           {/* فرم رزرو */}
           {selectedSlotId && (
             <form onSubmit={handleSubmit} className="space-y-6">
-              <h2 className="text-xl font-semibold text-gray-800 pb-3 border-b">
+              <h2 className="text-xl  text-gray-800 pb-3 border-b">
                 اطلاعات بیمار
               </h2>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">
+                  <label className="block text-gray-700  mb-2">
                     نام و نام خانوادگی <span className="text-red-600">*</span>
                   </label>
                   <input
@@ -220,7 +222,7 @@ export default function AppointmentBooking() {
                 </div>
 
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">
+                  <label className="block text-gray-700 mb-2">
                     شماره همراه <span className="text-red-600">*</span>
                   </label>
                   <input
@@ -238,7 +240,7 @@ export default function AppointmentBooking() {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-medium mb-2">
+                <label className="block text-gray-700 mb-2">
                   توضیحات / علائم (اختیاری)
                 </label>
                 <textarea
@@ -260,7 +262,7 @@ export default function AppointmentBooking() {
               )}
 
               {mutation.isSuccess && (
-                <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl text-center font-medium">
+                <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl text-center">
                   نوبت شما با موفقیت ثبت شد ✓
                 </div>
               )}
@@ -269,7 +271,7 @@ export default function AppointmentBooking() {
                 type="submit"
                 disabled={mutation.isPending || isLoading}
                 className={`
-                  w-full py-4 px-6 text-white font-semibold rounded-xl
+                  w-full py-4 px-6 text-white rounded-xl
                   transition-all duration-200 shadow-md
                   ${
                     mutation.isPending || isLoading

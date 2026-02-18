@@ -25,21 +25,19 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-900 text-gray-300 font-[vazir] ">
       {/* Main Footer */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* ستون ۱ - درباره دکتر */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xl">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white text-xl">
                 د
               </div>
-              <h3 className="text-xl font-bold text-white">
-                دکتر [نام خانوادگی]
-              </h3>
+              <h3 className="text-xl text-white">دکتر [نام خانوادگی]</h3>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-400 leading-relaxed mb-6 font-[vazir] ">
               متخصص [تخصص] با بیش از [X] سال سابقه فعالیت حرفه‌ای. ارائه خدمات
               تخصصی با استفاده از جدیدترین روش‌های درمانی و تجهیزات پیشرفته.
             </p>
@@ -56,9 +54,7 @@ export default function Footer() {
 
           {/* ستون ۲ - لینک‌های سریع */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">
-              لینک‌های مفید
-            </h4>
+            <h4 className="text-lg  text-white mb-6">لینک‌های مفید</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -75,7 +71,7 @@ export default function Footer() {
 
           {/* ستون ۳ - اطلاعات تماس */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">
+            <h4 className="text-lg text-white mb-6 font-[vazir] ">
               اطلاعات تماس
             </h4>
             <ul className="space-y-4">
@@ -95,13 +91,11 @@ export default function Footer() {
 
           {/* ستون ۴ - ساعات کاری + نقشه کوچک (اختیاری) */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">
-              ساعات پذیرش
-            </h4>
+            <h4 className="text-lg  text-white mb-6">ساعات پذیرش</h4>
             <div className="space-y-3 text-gray-400">
               <p>شنبه تا چهارشنبه: ۱۶:۰۰ – ۲۱:۰۰</p>
               <p>پنج‌شنبه: ۱۶:۰۰ – ۱۹:۰۰</p>
-              <p className="text-red-400 font-medium">جمعه: تعطیل</p>
+              <p className="text-red-400 ">جمعه: تعطیل</p>
 
               <div className="mt-6 pt-4 border-t border-gray-700">
                 <p className="text-sm">

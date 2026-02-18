@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Vazirmatn } from "next/font/google";
 import "./globals.css";
 import Providers from "@/utility/providers";
 
-const geistSans = Geist({
+const vazir = Vazirmatn({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -32,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html dir="rtl" lang="fa">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${vazir.variable} antialiased  `}>
         <Providers>{children}</Providers>
       </body>
     </html>

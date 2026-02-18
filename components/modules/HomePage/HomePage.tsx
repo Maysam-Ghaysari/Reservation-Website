@@ -10,7 +10,7 @@ import {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-slate-50 " dir="rtl">
+    <div className="min-h-screen bg-slate-50  " dir="rtl">
       {/* --- Hero Section --- */}
       <section className="max-w-7xl mx-auto px-6 py-20 lg:py-50 flex flex-col lg:flex-row items-center gap-12">
         {/* تصویر دکتر */}
@@ -28,16 +28,18 @@ export default function HomePage() {
         </div>
 
         {/* توضیحات */}
-        <div className="w-full lg:w-1/2 text-right space-y-8 order-1 lg:order-2">
-          <div className="space-y-4">
-            <span className="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider">
+        <div className="w-full lg:w-1/2 text-right space-y-8 order-1 lg:order-2 ">
+          <div className="space-y-4  ">
+            <span className="bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-2xs font-[vazir] tracking-wider">
               متخصص و جراح مغز و اعصاب
             </span>
-            <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-[1.3]">
+            <h1 className="text-4xl lg:text-5xl font-[vazir]  text-slate-900 leading-[1.3]">
               مشاوره و رزرو آنلاین نوبت <br />
-              <span className="text-blue-600">دکتر علی محمدی</span>
+              <span className="text-blue-600 font-[vazir] ">
+                دکتر علی محمدی
+              </span>
             </h1>
-            <p className="text-slate-600 text-lg leading-relaxed">
+            <p className="text-slate-600 text-lg leading-relaxed font-[vazir] ">
               با بیش از ۱۵ سال تجربه در جراحی‌های پیچیده و درمان‌های نوین. هدف
               ما بازگرداندن سلامتی و لبخند به لبان شماست. هم‌اکنون می‌توانید
               زمان حضور خود را به‌صورت آنلاین رزرو کنید.
@@ -47,14 +49,14 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link
               href="/appointment"
-              className="flex-1 bg-blue-600 text-white text-center py-4 rounded-2xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition shadow-xl shadow-blue-200"
+              className="flex-1 bg-blue-600 text-white text-center py-4 rounded-2xl font-[vazir] text-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition shadow-xl shadow-blue-200"
             >
               <HiOutlineCalendar size={24} />
               رزرو نوبت حضوری
             </Link>
             <Link
               href="#about"
-              className="flex-1 bg-white border border-slate-200 text-slate-700 text-center py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition"
+              className="flex-1 bg-white border border-slate-200 text-slate-700 text-center py-4 rounded-2xl font-[vazir] text-lg hover:bg-slate-50 transition"
             >
               مشاهده بیوگرافی
             </Link>
@@ -90,7 +92,7 @@ export default function HomePage() {
         id="about"
         className="max-w-4xl mx-auto px-6 py-20 text-center space-y-6"
       >
-        <h2 className="text-3xl font-bold text-slate-800">درباره پزشک</h2>
+        <h2 className="text-3xl font-[vazir]  text-slate-800">درباره پزشک</h2>
         <div className="h-1.5 w-20 bg-blue-600 mx-auto rounded-full"></div>
         <p className="text-slate-600 leading-[2] text-lg">
           دکتر علی محمدی فارغ‌التحصیل ممتاز دانشگاه علوم پزشکی تهران و دارای
@@ -117,7 +119,7 @@ function InfoCard({
     <div className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-100 transition-all hover:scale-105">
       <div className="p-3 bg-white rounded-xl shadow-sm">{icon}</div>
       <div className="text-right">
-        <h4 className="font-bold text-slate-800 mb-1">{title}</h4>
+        <h4 className=" text-slate-800 mb-1">{title}</h4>
         <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
       </div>
     </div>

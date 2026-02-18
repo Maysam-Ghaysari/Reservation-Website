@@ -49,7 +49,7 @@ const RegisterForm = () => {
     <div className="max-w-md mx-auto space-y-6 p-6 bg-white rounded-2xl shadow-lg">
       {/* عنوان */}
       <div className="text-right">
-        <h1 className="text-3xl font-bold text-gray-800 font-[vazir]">
+        <h1 className="text-3xl  text-gray-800 font-[vazir]">
           ایجاد حساب کاربری
         </h1>
         <p className="text-gray-500 text-sm mt-2 font-[vazir]">
@@ -117,7 +117,7 @@ const RegisterForm = () => {
         <button
           type="submit"
           disabled={isPending}
-          className={`w-full py-3 rounded-xl text-white font-bold text-lg shadow-md transition-all ${
+          className={`w-full py-3 rounded-xl text-white  text-lg shadow-md transition-all ${
             isPending
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-blue-500 hover:from-blue-600 hover:to-blue-700 active:scale-95 shadow-blue-300"
@@ -138,9 +138,7 @@ const RegisterForm = () => {
       <div className="text-center pt-3">
         <p className="text-gray-600 text-sm font-[vazir]">
           قبلاً عضو شده‌اید؟{" "}
-          <button className="text-blue-600 font-bold hover:underline">
-            وارد شوید
-          </button>
+          <button className="text-blue-600 hover:underline">وارد شوید</button>
         </p>
       </div>
     </div>

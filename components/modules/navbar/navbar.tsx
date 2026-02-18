@@ -35,7 +35,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-[vazir]  ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md shadow-sm"
           : "bg-white/80 backdrop-blur-sm"
@@ -45,13 +45,10 @@ export default function Navbar() {
         <div className="flex h-16 md:h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xl">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white text-xl">
               د
             </div>
-            <Link
-              href="/"
-              className="text-xl font-bold text-gray-900 md:text-2xl"
-            >
+            <Link href="/" className="text-xl  text-gray-900 md:text-2xl">
               دکتر [نام خانوادگی]
             </Link>
           </div>
@@ -62,7 +59,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors relative group"
+                className="text-gray-700 hover:text-blue-600  transition-colors relative group"
               >
                 {link.title}
                 <span className="absolute -bottom-1 right-0 left-0 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-right" />
@@ -71,10 +68,10 @@ export default function Navbar() {
           </nav>
 
           {/* Auth Buttons - Desktop */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4 font-[vazir] ">
             <Link
               href="/login"
-              className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition"
+              className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-blue-600 font-[vazir]  transition"
             >
               <FaSignInAlt size={18} />
               ورود
@@ -82,9 +79,9 @@ export default function Navbar() {
 
             <Link
               href="/appointment"
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium transition shadow-sm hover:shadow"
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-[vazir]  px-5 py-2.5 rounded-lg transition shadow-sm hover:shadow"
             >
-              <FaCalendarAlt size={18} />
+              <FaCalendarAlt size={18} className="font-[vazir] " />
               رزرو نوبت
             </Link>
           </div>
@@ -111,7 +108,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="block text-lg font-medium text-gray-800 hover:text-blue-600 py-1 transition"
+              className="block text-lg  text-gray-800 hover:text-blue-600 py-1 transition"
               onClick={() => setIsOpen(false)}
             >
               {link.title}
@@ -121,7 +118,7 @@ export default function Navbar() {
           <div className="pt-4 border-t border-gray-200 space-y-4">
             <Link
               href="/login"
-              className="flex items-center justify-center gap-2 w-full py-3 text-gray-700 font-medium border border-gray-300 rounded-lg hover:bg-gray-50 transition"
+              className="flex items-center justify-center gap-2 w-full py-3 text-gray-700  border border-gray-300 rounded-lg hover:bg-gray-50 transition"
               onClick={() => setIsOpen(false)}
             >
               <FaSignInAlt size={20} />
@@ -130,7 +127,7 @@ export default function Navbar() {
 
             <Link
               href="/appointment"
-              className="flex items-center justify-center gap-2 w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition shadow-sm"
+              className="flex items-center justify-center gap-2 w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition shadow-sm"
               onClick={() => setIsOpen(false)}
             >
               <FaCalendarAlt size={20} />

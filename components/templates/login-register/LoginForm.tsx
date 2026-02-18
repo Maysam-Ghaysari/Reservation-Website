@@ -109,7 +109,7 @@ const LoginForm = () => {
       <div className="text-center font-[vazir]">
         <p className="text-gray-600 text-sm">
           حساب کاربری ندارید؟{" "}
-          <button className="text-blue-600 font-bold hover:underline">
+          <button className="text-blue-600 hover:underline">
             ثبت‌نام کنید
           </button>
         </p>
